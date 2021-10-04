@@ -1,0 +1,173 @@
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 100vh;
+    background: rgb(69, 26, 228);
+}
+
+main{
+    display: flex;
+    width: 100%;
+
+    // Styling the aside space
+
+    aside{
+        background: rgb(0, 140, 255);
+        width: 15%;
+        height: 100vh;
+        background: url('/images/img/dash-img.jpg');
+        background-repeat: no-repeat;
+        background-position: left left;
+        background-size: cover;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #FFFFFF;
+        padding: 1em 2em;
+
+        .icons{
+            width: 100%;
+            display: flex;
+
+            .def-icons{
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    &:nth-child(2){
+                        margin: 0 1em;
+                    }
+                }
+            }
+
+            .search-bar{
+                width: 50%;
+                padding: 0;
+                margin: 0;
+                input{
+                    width: 100%;
+                    border-radius: 30px;
+                    background-color: #F8F8F8;
+                    border: none;
+                    background-image: url('/images/svgs/search.svg');
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-position-x: 1em;
+
+                   
+                }
+            }
+
+            ::placeholder{
+                color: gray;
+                padding-left: 4em;
+            }
+        }
+
+        .notif-user{
+            width: 35%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .notif{
+                position: relative;
+                
+                .messages{
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgb(238, 150, 150);
+                    display: block;
+                    top: .2em;
+                    right: -.5em;
+                    color: white;
+                    text-align: center;
+                    font-size: 12px;
+                    border-radius: 50%;
+
+                }
+               
+            }
+
+            .user-details{
+                display: flex;
+                justify-content: space-between;
+                .user-img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-image: url('/images/img/julian.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+
+                    &::before{
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background-color: #4BB76B;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        border-radius: 50%;
+                    }
+                }
+
+                .user-name{
+                    margin-left: .8em;
+                    h4{
+                        margin: 0;
+                    }
+                    .online{
+                        display: block;
+                        margin-bottom: 2em;
+                        font-size: 15px;
+                        color: #4BB76B;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+
+    .dash-content{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+
+        .card-container{
+            display: flex;
+            
+            .card{
+                background-color: #F6F0FF;
+            }
+        }
+    }
+
+}

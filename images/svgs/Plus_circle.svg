@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.897" height="25.897" viewBox="0 0 25.897 25.897">
+  <g id="Plus_circle" transform="translate(-393 -29.552)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="12.948" cy="12.948" r="12.948" transform="translate(393 29.552)" fill="#1492e6"/>
+    <path id="plus" d="M12.312,37.216H8.05V32.948A.948.948,0,0,0,7.1,32H6.156a.948.948,0,0,0-.947.948v4.267H.947A.948.948,0,0,0,0,38.164v.948a.948.948,0,0,0,.947.948H5.209v4.267a.948.948,0,0,0,.947.948H7.1a.948.948,0,0,0,.947-.948V40.06h4.262a.948.948,0,0,0,.947-.948v-.948A.948.948,0,0,0,12.312,37.216Z" transform="translate(399.319 3.862)" fill="#fcfcfc"/>
+  </g>
+</svg>

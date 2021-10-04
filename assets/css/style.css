@@ -1,0 +1,113 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Barlow", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 3em;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.945);
+  width: 100%;
+  margin: 0 2em;
+  animation: pop 1s ease-in-out 0.4s 1;
+}
+.wrapper .form form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.wrapper .form form .heading h1 {
+  position: relative;
+  font-size: 30pt;
+  text-transform: uppercase;
+}
+.wrapper .form form .heading h1::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 3px;
+  background: skyblue;
+  left: -0.1em;
+  top: 0em;
+}
+.wrapper .form form .inputs {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 1em;
+  width: 100%;
+}
+.wrapper .form form .inputs label {
+  display: block;
+  padding-bottom: 0.5em;
+}
+.wrapper .form form .inputs input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid skyblue;
+  background: none;
+}
+.wrapper .form .submit-btn {
+  margin-top: 2em;
+  padding: 10px 65px;
+  background: skyblue;
+  color: white;
+}
+.wrapper .form small {
+  margin-top: 0.8em;
+}
+.wrapper .form small a {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(15, 144, 230, 0.753);
+  transition: color 0.4s ease-in-out;
+}
+.wrapper .form small a:hover {
+  color: #0f90e6;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/img/background.jpg");
+    background-position: bottom;
+    background-position-y: -110em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .wrapper .form {
+    width: 35%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
