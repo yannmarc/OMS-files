@@ -1,0 +1,277 @@
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+main aside {
+  width: 15%;
+  height: 100vh;
+  background: url("/images/img/dash-img.jpg");
+  background-repeat: no-repeat;
+  background-position: left left;
+  background-size: cover;
+  position: relative;
+  max-height: 100vh;
+}
+
+main aside::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+main nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  padding: 1em 2em;
+}
+
+main nav .icons {
+  width: 100%;
+  display: flex;
+}
+
+main nav .icons .def-icons {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main nav .icons .def-icons span:nth-child(2) {
+  margin: 0 1em;
+}
+
+main nav .icons .search-bar {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+main nav .icons .search-bar input {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #F8F8F8;
+  border: none;
+  background-image: url("/images/svgs/search.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 1em;
+}
+
+main nav .icons ::placeholder {
+  color: gray;
+  padding-left: 4em;
+}
+
+main nav .notif-user {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main nav .notif-user .notif {
+  position: relative;
+}
+
+main nav .notif-user .notif .messages {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ee9696;
+  display: block;
+  top: 0.2em;
+  right: -0.5em;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+main nav .notif-user .user-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+main nav .notif-user .user-details .user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("/images/img/julian.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+main nav .notif-user .user-details .user-img::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #4BB76B;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+main nav .notif-user .user-details .user-name {
+  margin-left: 0.8em;
+}
+
+main nav .notif-user .user-details .user-name h4 {
+  margin: 0;
+}
+
+main nav .notif-user .user-details .user-name .online {
+  display: block;
+  margin-bottom: 2em;
+  font-size: 15px;
+  color: #4BB76B;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+
+.content .dash-content {
+  width: 100%;
+  height: 100vh;
+  background-color: #F5F5F5;
+}
+
+.content .dash-content .card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-basis: 25%;
+  width: 100%;
+  background-color: none;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.content .dash-content .card-container .card-styles {
+  background: white;
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+  gap: 0.5em;
+}
+
+.content .dash-content .card-container .card-styles .card-icon-img {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  padding: 2em 1.2em;
+  background: #F6F0FF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .dash-content .card-container .card-styles .card-icon-img i {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #A16AE8;
+}
+
+.content .dash-content .card-container .card-styles .desc {
+  margin-left: 1em;
+}
+
+.content .dash-content .card-container .card-styles .desc h5 {
+  font-size: 18pt;
+  font-weight: 500;
+}
+
+.content .dash-content .card-container .card-styles .desc p {
+  opacity: 0.7;
+}
+
+.content .dash-content .card-container .card-styles .desc .desc-btn {
+  padding: 0.5em 3em;
+  background-color: #92E2B5;
+  color: white;
+}
+
+.content .analyctics {
+  display: flex;
+  padding: 3em 2em;
+}
+
+.content .analyctics .graph-1 {
+  background-color: white;
+  width: 900px;
+  height: 600px;
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+.content .analyctics .graph-1 .graph {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  padding: 0.8em 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.content .analyctics .graph-1 .graph .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8em;
+  border-bottom: 2px solid skyblue;
+}
+
+.content .analyctics .graph-1 .graph .title .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0.8em;
+}
+
+.content .analyctics .graph-1 .graph .title .details h5 {
+  margin: 0;
+}
+
+.content .analyctics .graph-1 .graph .title .details span {
+  display: block;
+}
+
+.content .analyctics .graph-1 .graph .chart-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.content .analyctics .graph-1 .graph .chart-canvas canvas {
+  width: 100%;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

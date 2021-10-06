@@ -1,0 +1,131 @@
+
+@import 'variable';
+@import 'style';
+@import 'custom';
+
+// styling the brief section
+
+.brief{
+    background-color: $white;
+    padding: 0em 2em;
+
+    .brief-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .small-box{
+            display: flex;
+            align-items: center;
+
+            .new{
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5em 2em;
+                background: $lightGreen;
+
+                img{
+                    display: block;
+                    margin-bottom: .4em;
+                    margin-right: .6em;
+                }
+                h4{
+                    color: $white;
+                }
+            }
+
+            .button-container{
+                display: flex;
+                margin-left: 1em;
+                button{
+                    margin: 0;
+                    padding: 0;
+                    margin-right: .4em;
+                }
+            }
+        }
+
+        
+    }
+
+    .search-cus{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1.5em 0;
+        input{
+            display: block;
+            width: 50%;
+            border: none;
+            background-color: $lightGray;
+            border-radius: 30px;
+            position: relative;
+            background-image: url('/images/svgs/search.svg');
+            background-repeat: no-repeat;
+            background-position: left;
+            background-position-x: 1.2em;
+            padding: .3em 0;
+        }
+
+        img{
+            display: block;
+            position: absolute;
+            top: auto;
+            left: 60%;
+
+        }
+
+        ::placeholder{
+            color: $black;
+            padding-left: 5em;
+            padding-bottom: .3em;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+}
+
+.cus-table{
+    width: 100%;
+
+    th, td{
+        width: 16.6%;
+
+    }
+    th{
+        text-align: left;
+        padding: 1em;
+        background-color: $black;
+        color: $white;
+    }
+    td{
+        font-size: 1em;
+        padding-left: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+
+        .cus-img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    tr{
+        background: white;
+        &:nth-child(even){
+            background-color: $lightGray;
+        }
+    }
+}
