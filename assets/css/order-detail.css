@@ -1,0 +1,139 @@
+.order-detail-content {
+  width: 100%;
+  display: flex;
+  padding: 1em 2em;
+  background-color: rgba(212, 212, 212, 0.432);
+  justify-content: space-between;
+  position: relative;
+}
+.order-detail-content .table-section {
+  width: 100%;
+  margin-right: 2em;
+  background-color: #ffffff;
+}
+.order-detail-content .table-section table {
+  width: 100%;
+  padding: 0 0.5em;
+}
+.order-detail-content .table-section table tr {
+  padding: 0;
+  width: 100%;
+}
+.order-detail-content .table-section table tr:nth-child(even) {
+  background-color: transparent;
+}
+.order-detail-content .table-section table th, .order-detail-content .table-section table td {
+  width: 25%;
+}
+.order-detail-content .table-section table th {
+  background-color: #F6F6F6;
+  padding: 0.8em 0.5em;
+}
+.order-detail-content .table-section table td {
+  background-color: white;
+  padding: 0em 0.5em;
+  margin: 0;
+}
+.order-detail-content .table-section table .edit-certif {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1em 0.5em;
+}
+.order-detail-content .table-section table .edit-certif span {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.order-detail-content .table-section table .edit-certif span:last-child {
+  margin-left: 0.5em;
+  color: green;
+}
+.order-detail-content .table-section table .edit-certif span:last-child:hover {
+  opacity: 0.5;
+}
+.order-detail-content .table-section table .edit-certif span:first-child {
+  color: red;
+}
+.order-detail-content .table-section table .edit-certif span:first-child:hover {
+  opacity: 0.5;
+}
+.order-detail-content .order-complement {
+  background-color: white;
+  width: 35%;
+  position: fxed;
+  height: 350px;
+}
+.order-detail-content .customer-info h3 {
+  padding: 0.8em 1em;
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-bottom: 1.8em;
+}
+.order-detail-content .customer-info .customer-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 1em;
+  margin-top: -2.2em;
+}
+.order-detail-content .customer-info .customer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.order-detail-content .customer-info .customer-name {
+  margin-left: 1em;
+  padding: 0.3em 0em;
+}
+.order-detail-content .customer-info .customer-order-info {
+  padding: 0.5em 1em;
+}
+.order-detail-content .customer-info .customer-order-info h4 {
+  font-size: 14pt;
+  position: relative;
+  font-weight: 300;
+}
+.order-detail-content .customer-info .customer-order-info h4::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #3CA4E9;
+  position: absolute;
+  bottom: -0.5em;
+  left: 0px;
+}
+.order-detail-content .customer-info .customer-order-info table {
+  width: 100%;
+  margin-top: 2em;
+}
+
+form {
+  padding: 1em 0;
+}
+form .coments {
+  background-color: #E8E8E8;
+  border-radius: 7px;
+  height: 100px;
+  width: 100%;
+  outline: none;
+  border: 0;
+  resize: none;
+  display: block;
+  padding-left: 0.8em;
+  padding-top: 0.8em;
+  color: #E8E8E8;
+}
+
+.second-column {
+  margin-top: 4em;
+}
+.second-column .summary table tbody td {
+  padding: 0.4em 0;
+}
+.second-column .summary .pending {
+  border-radius: 30px;
+  width: 25%;
+}
+
+/*# sourceMappingURL=order-detail.css.map */

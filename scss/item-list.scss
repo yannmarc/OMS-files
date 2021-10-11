@@ -1,0 +1,80 @@
+
+@import 'variable';
+// Styling the brief-2 section since I have already linked the styles of the customer list table
+
+.brief-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(175, 175, 175);
+    padding: .8em 2em;
+
+    .small-text{
+        display: block;
+        color: $lightGray;
+    }
+
+    .detail-form{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            color: $lightGray;
+            margin-right: .8em;
+            margin: 0;
+            padding-right: 1em;
+        }
+
+        input{
+            display: block;
+            border: none;
+            background-color: white;
+            padding: 0em .5em;
+            width: 20%;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .action-btn{
+        display: flex;
+        justify-content: space-between;
+
+        button:not(:enabled), [type=button]:not(:enabled), [type=reset]:not(:enabled), [type=submit]:not(:enabled) {
+            cursor: pointer;
+            color: green;
+        }
+    }
+}
+
+.cus-table{
+    
+    th, td{
+        width: 12.5%;
+    }
+    
+    td{
+        padding-left: 1em;
+    }
+
+    td .cus-img{
+        border-radius: 0px;
+        overflow: visible;
+        width: 50px;
+        height: 50px;
+
+        img{
+            border-radius: 0px;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+    }
+}
+
+table{
+    padding: 0em 2em;
+}

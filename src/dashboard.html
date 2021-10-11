@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
     <title>dashboard</title>
 </head>
 <body>
     <main>
         <aside>
-            
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#" class="active-click">dashboard</a>
+                        <i class="bi bi-plus"></i>
+                    </li>
+                    <li>
+                        <a href="#">Item List</a>
+                        <i class="bi bi-plus"></i>
+                    </li>
+                    <li>
+                        <a href="#">Order List</a>
+                        <i class="bi bi-plus"></i>
+                    </li>
+                    <li>
+                        <a href="#">Customer</a>
+                        <i class="bi bi-plus"></i>
+                    </li>
+                </ul>
+            </nav> 
         </aside>
         
         <div class="content">
@@ -49,8 +69,112 @@
             </nav>
 
             <!-- Dash statistics table -->
+           <div class="stats-container">
+
+            <!-- The card section -->
+               <div class="the-card-container">
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-bag-fill"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-cart"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-cart-check-fill"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-box"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+               </div>  
+
+               <!-- The chart section -->
+               
+               <div class="canvas-section">
+
+                    <div class="first-line-graph">
+
+                       <div class="heading">
+                           <h4>order summary</h4>
+                           <div class="date-dropdown">
+                               <i class="bi bi-calendar"></i>
+                               <h6>This month</h6>
+                               <i class="bi bi-caret-down-fill"></i>
+                           </div>
+                       </div>
+
+                       <div class="canvas-graph-section">
+                            <canvas id="myChart" width="50"></canvas>
+                       </div>
+                    </div>
+
+                   
+
+                        <div class="second-pie-chart">
+                            <div class="heading">
+                                <h4>order summary</h4>
+                                <div class="date-dropdown">
+                                    <i class="bi bi-calendar"></i>
+                                    <h6>This month</h6>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="canvas-pie-chart">
+                                <canvas id="statChart" width="20"></canvas>
+                            </div>
+                         </div>
+
+               </div>
+
+           </div>
+
             
-            </section>
+        </div>
+           
         </div>
     </main>
 
@@ -84,7 +208,9 @@
                     ],
                     borderWidth: 1
                 },
+                // SECOND LINE GRAPHD
                 {
+                label: "Order Completed",
                   data: [23, 54, 84, 51, 54, 38],
                   fill: true,
                   opacity: 0.5,

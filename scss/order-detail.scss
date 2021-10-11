@@ -1,0 +1,176 @@
+
+// importing the variables;
+
+@import 'variable';
+
+.order-detail-content{
+    width: 100%;
+    display: flex;
+    padding: 1em 2em;
+    background-color: rgba(212, 212, 212, 0.432);
+    justify-content: space-between;
+    position: relative;
+
+    .table-section{
+        width: 100%;
+        margin-right: 2em;
+        background-color: $white;
+
+
+        table{
+            width: 100%;
+            padding: 0 .5em;
+            
+            tr{
+                padding: 0;
+                width: 100%;
+
+               
+                &:nth-child(even){
+                    background-color: transparent;
+                }
+            }
+            th, td{
+                width: 25%;
+            }
+            th{
+                background-color: #F6F6F6;
+                padding: .8em .5em;
+            }
+            td{
+                background-color: white;
+                padding: 0em .5em; 
+                margin: 0;
+            }
+
+            .edit-certif{
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 1em .5em;
+                span{
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    &:last-child{
+                        margin-left: .5em;
+                        color: green;
+                        
+                        &:hover{
+                            opacity: .5;
+                        }
+                    }
+                }
+                span{
+                    &:first-child{
+                        color: red;
+                        &:hover{
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order-complement{
+        background-color: white;
+        width: 35%;
+        position: fxed;
+        height: 350px;
+    }
+
+    .customer-info{
+        
+
+        h3{
+            padding: .8em 1em;
+            width: 100%;
+            background-color: #F6F6F6;
+            padding-bottom: 1.8em;
+        }
+        .customer-img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-left: 1em;
+            margin-top: -2.2em;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .customer-name{
+            margin-left: 1em;
+            padding: .3em 0em;
+        }
+
+        .customer-order-info{
+            padding: .5em 1em;
+
+            h4{
+                font-size: 14pt;
+                position: relative;
+                font-weight: 300;
+                
+                &::before{
+                    content: '';
+                    width: 60px;
+                    height: 3px;
+                    background-color: $warmBlue;
+                    position: absolute;
+                    bottom: -.5em;
+                    left: 0px;
+                }
+            }
+
+            table{
+                width: 100%;
+                margin-top: 2em;
+
+            }
+        }
+    }
+    
+}
+
+
+form{
+    padding: 1em 0;
+    .coments{
+        background-color: $lightGray;
+        border-radius: 7px;
+        height: 100px;
+        width: 100%;
+        outline: none;
+        border: 0;
+        resize: none;
+        display: block;
+        padding-left: .8em;
+        padding-top: .8em;
+        color: $lightGray
+    
+    }
+}
+
+.second-column{
+    margin-top: 4em;
+
+    .summary{
+        table{
+            tbody{
+                td{
+                   padding: .4em 0;
+                   
+                }
+            }
+        }
+        .pending{
+            border-radius: 30px;
+            width: 25%;
+        }
+    }
+}

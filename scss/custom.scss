@@ -1,8 +1,11 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "style";
 @import "mixins";
-@import "dashboard";
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 ul{
     list-style: none;
     margin: 0;
@@ -15,7 +18,4 @@ button{
     padding: .5em 1em;
     background-color: none;
     background: none;
-}
-body{
-    position: relative;
 }
