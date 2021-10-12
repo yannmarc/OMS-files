@@ -23,6 +23,7 @@ main aside nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0;
@@ -34,6 +35,7 @@ main aside nav ul {
   margin: 0;
   padding: 0;
   margin-top: 12em;
+  position: sticky;
 }
 main aside nav ul li {
   width: 100%;
@@ -104,6 +106,30 @@ main nav .icons .def-icons {
 }
 main nav .icons .def-icons span:nth-child(2) {
   margin: 0 1em;
+}
+main nav .icons .def-icons .fade-out {
+  cursor: pointer;
+  position: relative;
+}
+main nav .icons .def-icons .fade-out .tool-tip {
+  padding: 0.1em 0.1em;
+  border: 1px solid #ffffff;
+  background: #000000;
+  color: white;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 90px;
+  font-size: 13px;
+  text-align: center;
+}
+main nav .icons .def-icons .fade-out:hover {
+  opacity: 0.7;
+}
+main nav .icons .def-icons .fade-out:hover .tool-tip {
+  display: block;
+  background-color: #000000;
 }
 main nav .icons .search-bar {
   width: 50%;
@@ -186,17 +212,19 @@ main nav .notif-user .user-details .user-name .online {
   width: 100%;
 }
 .content .stats-container {
-  border: 2px solid red;
+  background-color: rgba(212, 212, 212, 0.13);
   padding: 0.5em 3em;
 }
 .content .stats-container .the-card-container {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  column-gap: 5em;
+  column-gap: 1em;
+  margin-top: 1em;
 }
 .content .stats-container .the-card-container .one-card {
   display: flex;
   justify-content: space-between;
+  background-color: #ffffff;
   padding: 1em 1.5em;
   border-radius: 8px;
   box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.1);
@@ -242,22 +270,41 @@ main nav .notif-user .user-details .user-name .online {
   background-color: #4BB76B;
   opacity: 0.8;
 }
+.content .stats-container .the-card-container .one-card:nth-child(2) .icon {
+  background-color: #EDFCF4;
+}
+.content .stats-container .the-card-container .one-card:nth-child(2) .icon i {
+  color: #33DF83;
+}
+.content .stats-container .the-card-container .one-card:nth-child(3) .icon {
+  background-color: #E6FFFD;
+}
+.content .stats-container .the-card-container .one-card:nth-child(3) .icon i {
+  color: #65C6FF;
+}
+.content .stats-container .the-card-container .one-card:nth-child(4) .icon {
+  background-color: #FFF0FE i;
+  background-color-color: #F258E8;
+}
 .content .stats-container .canvas-section {
   width: 100%;
-  border: 2px solid red;
   display: flex;
   margin-top: 3em;
 }
 .content .stats-container .canvas-section .first-line-graph {
   padding: 2em;
-  border: 2px solid blue;
-  width: 100%;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease-in-out;
+  background-color: #ffffff;
 }
 .content .stats-container .canvas-section .first-line-graph .heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid skyblue;
+  border-bottom: 3px solid rgba(135, 207, 235, 0.377);
 }
 .content .stats-container .canvas-section .first-line-graph .heading h4 {
   text-transform: uppercase;
@@ -274,24 +321,31 @@ main nav .notif-user .user-details .user-name .online {
   color: #E8E8E8;
   margin: 0.5em 0em;
 }
+.content .stats-container .canvas-section .first-line-graph .heading .date-dropdown h6 {
+  margin: 0 1em;
+}
 .content .stats-container .canvas-section .canvas-graph-section {
   width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 .content .stats-container .canvas-section .second-pie-chart {
   padding: 2em;
-  border: 2px solid blue;
-  width: 50%;
+  width: 30%;
+  height: 70%;
   margin-left: 2em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.1);
 }
 .content .stats-container .canvas-section .second-pie-chart .heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid skyblue;
+  border-bottom: 3px solid rgba(135, 207, 235, 0.349);
 }
 .content .stats-container .canvas-section .second-pie-chart .heading h4 {
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 0 !important;
   padding: 0;
 }
 .content .stats-container .canvas-section .second-pie-chart .heading .date-dropdown {
@@ -304,9 +358,161 @@ main nav .notif-user .user-details .user-name .online {
   color: #E8E8E8;
   margin: 0.5em 0em;
 }
+.content .stats-container .canvas-section .second-pie-chart .heading .date-dropdown h6 {
+  padding: 0;
+  margin: 0 1em;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail {
+  width: 100%;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail table {
+  width: 100%;
+  display: table;
+  vertical-align: center;
+  horizontal-align: center;
+  margin: 1em 0em;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail table td {
+  padding: 0.5em 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail table .stat-btn {
+  font-weight: 400;
+  background-color: #E3BCEE;
+  border-radius: 30px;
+  padding: 0.1em 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail table .ship {
+  background-color: #3CA4E9;
+}
+.content .stats-container .canvas-section .second-pie-chart .canvas-pie-chart .stats-detail table .warehs {
+  background-color: #E4F5F9;
+}
 
 #myChart {
-  width: 5%;
+  width: 100% !important;
+  transition: all 0.5s ease-in-out 0.3s;
+}
+
+#statChart {
+  width: 310px !important;
+  height: 310px !important;
+  margin-top: 3em;
+  transition: all 0.5s ease-in-out;
+}
+
+.recent-order-section {
+  display: flex;
+  margin-top: 5em;
+  width: 100%;
+}
+.recent-order-section .recent-order-table {
+  width: 100%;
+}
+.recent-order-section .recent-order-table h1 {
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+.recent-order-section .recent-order-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0em 2em;
+}
+.recent-order-section .recent-order-table table tr {
+  border-radius: 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.recent-order-section .recent-order-table table tr:hover {
+  opacity: 0.8;
+}
+.recent-order-section .recent-order-table table tr:nth-child(odd) {
+  background-color: #E8E8E8;
+}
+.recent-order-section .recent-order-table table tr:first-child {
+  cursor: auto;
+}
+.recent-order-section .recent-order-table table tr:first-child:hover {
+  opacity: 1;
+}
+.recent-order-section .recent-order-table table th {
+  font-weight: 600;
+  background-color: #E8E8E8;
+  padding: 1em;
+}
+.recent-order-section .recent-order-table table th, .recent-order-section .recent-order-table table td {
+  width: 16.6%;
+  text-align: center;
+}
+.recent-order-section .recent-order-table table td {
+  padding: 0.5em;
+  font-weight: 400;
+}
+.recent-order-section .recent-order-table table span {
+  background-color: #4BB76B;
+  color: white;
+  padding: 0.2em 1em;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.recent-order-section .recent-order-table table .cus-recent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.recent-order-section .recent-order-table table .cus-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recent-order-section .recent-order-table table .cus-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+.recent-order-section .recent-order-table table .cus-img img:hover {
+  transform: scale(1.2);
+}
+.recent-order-section .recent-order-graph {
+  width: 30%;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.1);
+  margin-left: 2.1em;
+  padding: 1em 0.8em;
+}
+.recent-order-section .recent-order-graph .chart-container h5 {
+  color: #E8E8E8;
+  padding-bottom: 0.5em;
+}
+.recent-order-section .recent-order-graph .chart-container .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  margin-bottom: 8em;
+}
+.recent-order-section .recent-order-graph .chart-container .price h6 {
+  color: #4BB76B;
 }
 
 /*# sourceMappingURL=dashboard.css.map */

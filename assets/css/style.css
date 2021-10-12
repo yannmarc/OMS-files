@@ -16,6 +16,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100vh;
 }
 .wrapper .form {
   display: flex;
@@ -47,6 +48,7 @@ main {
   height: 3px;
   left: -0.1em;
   top: 0em;
+  background-color: skyblue;
 }
 .wrapper .form form .inputs {
   display: flex;
@@ -65,13 +67,17 @@ main {
   border: none;
   outline: none;
   border-bottom: 2px solid skyblue;
-  background: none;
+  background-color: transparent;
 }
 .wrapper .form .submit-btn {
   margin-top: 2em;
   padding: 10px 65px;
-  background: skyblue;
+  background: #4bbdeb;
   color: white;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper .form .submit-btn:hover {
+  opacity: 0.8;
 }
 .wrapper .form small {
   margin-top: 0.8em;
