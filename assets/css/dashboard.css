@@ -231,6 +231,7 @@ main nav .notif-user .user-details .user-name .online {
 
 .content {
   width: 100%;
+  border: 3px solid red;
 }
 .content .stats-container {
   background-color: rgba(212, 212, 212, 0.13);
