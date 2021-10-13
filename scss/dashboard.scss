@@ -43,6 +43,7 @@ main{
                 padding: 0;
                 margin-top: 12em;
                 position: sticky;
+                background-color: rgba(0, 0, 0, 0.6);
 
                 li{
                     width: 100%;
@@ -139,29 +140,65 @@ main{
                     cursor: pointer;
                     position: relative;
 
-                    .tool-tip{
-                        padding: .1em .1em;
-                        border: 1px solid $white;
-                        background: $black;
-                        color: white;
-                        display: none;
-                        position: absolute;
-                        top: 30px;
-                        left: 0;
-                        width:90px;
-                        font-size: 13px;
-                        text-align: center;
+                    
+
+                    
+
+                    
+
+                    .add-dropdown.show{
+                        display: block;
                     }
+
                 
                     &:hover{
-                        opacity: .7;
+                        opacity: .8;
                 
                         .tool-tip{
                             display: block;
                             background-color: $black;
+                        animation: lost 3s ease-in-out;
                         }
                     }
                 
+                }
+
+                .fade-out{
+                    .add-dropdown{
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        display: none;
+                        width: 150px;
+
+                        
+
+                        ul{
+                            width: 100%;
+                            height: inherit;
+                            background-color: rgb(236, 236, 236);
+                            padding: .5em;
+                            backdrop-filter: blur(10px);
+
+                            li{
+                                margin-top: .5em;
+                                padding: .3em .5em;
+                                transition-delay: .2s;
+                                transition: all .4s ease-in;
+
+                                &:hover{
+                                    backdrop-filter: blur(20px);
+                                    background-color: rgb(185, 184, 184);
+                                    font-weight: 400;
+                                    color: black;
+                                }
+                            }
+                        }
+                        
+                    }
                 }
             }
 
@@ -264,6 +301,7 @@ main{
     .stats-container{
         background-color: rgba(212, 212, 212, 0.13);
         padding: .5em 3em;
+        animation: scroolUp 1.5s ease-in-out;
         .the-card-container{
             display: grid;
             grid-template-columns: repeat(4, auto);
@@ -652,3 +690,24 @@ main{
     }
 }
 
+@keyframes scroolUp{
+    from{
+        transform: translateY(5%);
+        opacity: .1;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes lost{
+    from{
+        opacity: 1;
+        display: block;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}

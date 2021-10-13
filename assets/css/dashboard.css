@@ -36,6 +36,7 @@ main aside nav ul {
   padding: 0;
   margin-top: 12em;
   position: sticky;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 main aside nav ul li {
   width: 100%;
@@ -111,25 +112,45 @@ main nav .icons .def-icons .fade-out {
   cursor: pointer;
   position: relative;
 }
-main nav .icons .def-icons .fade-out .tool-tip {
-  padding: 0.1em 0.1em;
-  border: 1px solid #ffffff;
-  background: #000000;
-  color: white;
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 90px;
-  font-size: 13px;
-  text-align: center;
+main nav .icons .def-icons .fade-out .add-dropdown.show {
+  display: block;
 }
 main nav .icons .def-icons .fade-out:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 main nav .icons .def-icons .fade-out:hover .tool-tip {
   display: block;
   background-color: #000000;
+  animation: lost 3s ease-in-out;
+}
+main nav .icons .def-icons .fade-out .add-dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  display: none;
+  width: 150px;
+}
+main nav .icons .def-icons .fade-out .add-dropdown ul {
+  width: 100%;
+  height: inherit;
+  background-color: #ececec;
+  padding: 0.5em;
+  backdrop-filter: blur(10px);
+}
+main nav .icons .def-icons .fade-out .add-dropdown ul li {
+  margin-top: 0.5em;
+  padding: 0.3em 0.5em;
+  transition-delay: 0.2s;
+  transition: all 0.4s ease-in;
+}
+main nav .icons .def-icons .fade-out .add-dropdown ul li:hover {
+  backdrop-filter: blur(20px);
+  background-color: #b9b8b8;
+  font-weight: 400;
+  color: black;
 }
 main nav .icons .search-bar {
   width: 50%;
@@ -214,6 +235,7 @@ main nav .notif-user .user-details .user-name .online {
 .content .stats-container {
   background-color: rgba(212, 212, 212, 0.13);
   padding: 0.5em 3em;
+  animation: scroolUp 1.5s ease-in-out;
 }
 .content .stats-container .the-card-container {
   display: grid;
@@ -513,6 +535,27 @@ main nav .notif-user .user-details .user-name .online {
 }
 .recent-order-section .recent-order-graph .chart-container .price h6 {
   color: #4BB76B;
+}
+
+@keyframes scroolUp {
+  from {
+    transform: translateY(5%);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes lost {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=dashboard.css.map */

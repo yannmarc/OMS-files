@@ -11133,6 +11133,10 @@ button {
   background: none;
 }
 
+main {
+  position: relative;
+}
+
 .brief {
   background-color: #ffffff;
   padding: 0em 2em;
@@ -11153,10 +11157,15 @@ button {
   align-items: center;
   padding: 0.5em 2em;
   background: #4BB76B;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.brief .brief-1 .small-box .new:hover {
+  opacity: 0.8;
 }
 .brief .brief-1 .small-box .new img {
   display: block;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
   margin-right: 0.6em;
 }
 .brief .brief-1 .small-box .new h4, .brief .brief-1 .small-box .new .h4 {
@@ -11238,6 +11247,175 @@ button {
 }
 .cus-table tr:nth-child(even) {
   background-color: #E8E8E8;
+}
+
+.modal-section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.modal-section .add {
+  display: inline-block;
+}
+.modal-section .customer-container {
+  background-color: white;
+  box-shadow: 2px 2px 50px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 1000px;
+  height: 850px;
+  position: fixed;
+  top: 5%;
+}
+.modal-section .customer-container .bi-x-circle {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-weight: 600;
+  font-size: 30px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.modal-section .customer-container .bi-x-circle:hover {
+  color: red;
+}
+.modal-section .customer-container .modal-img {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+.modal-section .customer-container .modal-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+}
+.modal-section .customer-container .modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.modal-section .customer-container .modal-img:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.modal-section .customer-container .modal-img:hover:before {
+  visibility: visible;
+}
+.modal-section .customer-container .modal-form {
+  width: 100%;
+  padding: 5em;
+}
+.modal-section .customer-container .modal-form .modal-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.modal-section .customer-container .modal-form .modal-heading::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.modal-section .customer-container .modal-form form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+.modal-section .customer-container .modal-form form .avatar {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-section .customer-container .modal-form form .avatar .avatar-container {
+  width: 130px;
+  height: 130px;
+  border: 1px solid black;
+  position: relative;
+}
+.modal-section .customer-container .modal-form form .avatar .avatar-container .add-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.3em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #E8E8E8;
+  width: 100%;
+  cursor: pointer;
+}
+.modal-section .customer-container .modal-form form .avatar .avatar-container .add-img:hover {
+  opacity: 0.8;
+}
+.modal-section .customer-container .modal-form form .avatar .avatar-container .add-img .bi-pencil {
+  color: white;
+  font-size: 15px;
+}
+.modal-section .customer-container .modal-form form .modal-data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+.modal-section .customer-container .modal-form form .modal-data label {
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
+}
+.modal-section .customer-container .modal-form form .modal-data input {
+  margin-top: 0em;
+  border: none;
+  border-bottom: 1px solid #3CA4E9;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+  color: #3CA4E9;
+}
+.modal-section .customer-container .modal-form form .modal-data input:focus {
+  outline: none;
+  background-color: transparent;
+}
+.modal-section .customer-container .modal-form form .role-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1.5em;
+}
+.modal-section .customer-container .modal-form form .role-container .role {
+  outline: #3CA4E9;
+}
+.modal-section .customer-container .modal-form form .role-container .role:focus {
+  border: 2px solid #3CA4E9;
+  outline-color: #3CA4E9;
+}
+.modal-section .customer-container .modal-form form .modal-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 2em;
+}
+.modal-section .customer-container .modal-form form .modal-btn button {
+  padding: 0.2em 1.5em;
+  background-color: #f1a0a0;
+  color: white;
+}
+.modal-section .customer-container .modal-form form .modal-btn .btns-submit {
+  background-color: #5fbde2;
+  color: white;
 }
 
 /*# sourceMappingURL=customer.css.map */
