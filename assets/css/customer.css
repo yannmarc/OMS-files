@@ -11217,6 +11217,12 @@ main {
 .cus-table {
   width: 100%;
 }
+.cus-table tr {
+  transition: opacity 0.5s ease-in-out;
+}
+.cus-table tr:hover {
+  opacity: 0.8;
+}
 .cus-table th, .cus-table td {
   width: 16.6%;
 }
@@ -11233,8 +11239,8 @@ main {
   padding-bottom: 0.5em;
 }
 .cus-table td .cus-img {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -11261,9 +11267,6 @@ main {
   align-items: center;
   display: none;
   transition: all 0.5s ease-in-out;
-}
-.modal-section .add {
-  display: inline-block;
 }
 .modal-section .customer-container {
   background-color: white;
@@ -11416,6 +11419,11 @@ main {
 .modal-section .customer-container .modal-form form .modal-btn .btns-submit {
   background-color: #5fbde2;
   color: white;
+}
+
+.modal-section.show {
+  display: inline-flex;
+  transition: all 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=customer.css.map */
