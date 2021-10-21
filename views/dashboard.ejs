@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/dash-head') %> 
+<body>
+    <main>
+        <%- include('./partials/aside-bar') %> 
+        
+        <div class="content">
+           <%- include('./partials/navbar') %> 
+
+            <!-- Dash statistics table -->
+           <div class="stats-container">
+
+            <!-- The card section -->
+               <div class="the-card-container">
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-bag-fill"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-cart-fill"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-cart-check-fill"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-card">
+                        <div class="icon">
+                            <i class="bi bi-box"></i>
+                        </div>
+                        <div class="text">
+                            <div class="stats-text">
+                                <h2>1.45k</h2>
+                                <p>Order Placed</p>
+                            </div>
+                            <div class="stats-btn">
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+               </div>  
+
+               <!-- The chart section -->
+               
+               <div class="canvas-section">
+
+                    <div class="first-line-graph">
+
+                       <div class="heading">
+                           <h4>order summary</h4>
+                           <div class="date-dropdown">
+                               <i class="bi bi-calendar"></i>
+                               <h6>This month</h6>
+                               <i class="bi bi-caret-down-fill"></i>
+                           </div>
+                       </div>
+
+                       <div class="canvas-graph-section">
+                            <canvas id="myChart"></canvas>
+                       </div>
+                    </div>
+
+                   
+
+                        <div class="second-pie-chart">
+                            <div class="heading">
+                                <h4>order summary</h4>
+                                <div class="date-dropdown">
+                                    <i class="bi bi-calendar"></i>
+                                    <h6>This month</h6>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="canvas-pie-chart">
+                                <div class="stats-detail">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Quantity in stock</td>
+                                                <td class="stat-btn">60%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ship orders</td>
+                                                <td class="stat-btn ship">45%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Warehouse</td>
+                                                <td class="stat-btn warehs">15%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <canvas id="statChart"></canvas>
+                            </div>
+                         </div>
+
+               </div>
+
+               <!-- The recent order section over here -->
+               <div class="recent-order-section">
+                    <div class="recent-order-table">
+                        <h1>RECENT ORDERS</h1>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Customer pic</th>
+                                    <th>Customer name</th>
+                                    <th>Customer address</th>
+                                    <th>Order No</th>
+                                    <th>Order status</th>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td class="cus-recent">
+                                        <div class="cus-img">
+                                            <img src="../images/img/user (5).jpg" alt="" width="20">
+                                        </div>
+                                    </td>
+                                    <td>Julian wan</td>
+                                    <td>julianwan@gmail.com</td>
+                                    <td>40</td>
+                                    <td>
+                                        <span  class="status-btn">completed</span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="recent-order-graph">
+                        <h3 class="head">Product List</h3>
+                        <div class="chart-container">
+                            <h5>Total Balance</h5>
+
+                            <div class="price">
+                                <h3>$1,534</h3>
+                                <h6>+7%</h6>
+                            </div>
+                            <canvas id="LineChart"></canvas>
+                        </div>
+                    </div>
+               </div>
+
+           </div>
+
+            
+        </div>
+           
+        </div>
+    </main>
+
+    
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [0, 19, 3, 5, 2, 3],
+                    fill: true,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                },
+                // SECOND LINE GRAPHD
+                {
+                label: "Order Completed",
+                  data: [23, 54, 84, 51, 54, 38],
+                  fill: true,
+                  opacity: 0.5,
+                  backgroundColor:[
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)' 
+                  ],
+                  borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)',
+                        'rgba(152, 120, 235, 1)' 
+                  ],
+                  borderWidth: 1
+
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+
+<script>
+    var ctx = document.getElementById('statChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Quantity in stock', 'shiped Ordres', 'Warehouse'],
+            datasets: [{
+                data: [60, 35, 15],
+                backgroundColor: [
+                    'rgba(255, 99, 132)',
+                    'rgba(54, 162, 235)',
+                    'rgba(255, 206, 86)',
+                   
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+    });
+    </script>
+
+<script>
+    var ctx = document.getElementById('LineChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [0, 19, 3, 5, 2, 3],
+                fill: true,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        }, 
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/item-head') %> 
+<body>
+    <main>
+        <%- include('./partials/aside-bar') %> 
+        
+        <div class="content">
+            <%- include('./partials/navbar') %> 
+
+            <!-- Table for the Item list -->
+
+            <div class="brief">
+
+                <div class="brief-1">
+                    <h1>ALL ITEMS</h1>
+                    <div class="small-box">
+                        <span class="new">
+                            <h4>create</h4>
+                        </span>
+                        <div class="button-container">
+                            <button>
+                                <img src="../images/svgs/grid.svg" alt="grid mode display" width="50">
+                            </button>
+                            <button>
+                                <img src="../images/svgs/list.svg" alt="List mode dispaly" width="50">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-cus">
+                    <input type="search" placeholder="search">
+                    <img src="../images/svgs/caret-down.svg" alt="carret icon">
+                </div>
+            </div>
+
+            <div class="brief-2">
+                <span class="small-text">showing 10 out of 64</span>
+                <div class="detail-form">
+                    <p>show</p>
+                    <input type="number" name="detail-number" id="">
+                </div>
+            </div>
+
+            <div class="table-section">
+                <table class="cus-table">
+                    <tbody>
+                        <!-- Tables headings -->
+                        <tr>
+                            <th>#</th>
+                            <th>Image</th>
+                            <th>Item name</th>
+                            <th>Item ID</th>
+                            <th>Description</th>
+                            <th>Warehouse</th>
+                            <th>Record Level</th>
+                            <th>Action</th>
+                        </tr>
+
+                        <!-- Table data values -->
+                        <tr>
+                            <td>0</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/iphone_5s.jpg" alt="" width="200">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet </td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/show.jpg" alt="" width="200">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor </td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/coating.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/coating.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/coating.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/dash-img.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/samsung_s20.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/macbook.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/mackbook_air.jpg" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>
+                                <div class="cus-img">
+                                    <img src="../images/img/desk" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                Coatings
+                            </td>
+                            <td>ID-0000</td>
+                            <td class="">Lorem ipsum dolor sit amet</td>
+                            <td>Available in stock</td>
+                            <td>80</td>
+                            <td class="action-btn">
+                                <span style="color: green; margin-right: 1em;">edit</span>
+                                <span style="color: red;">delete</span>
+                            </td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    </main>
+</body>
+</html>
